@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    //SCRIPT FOR PLAYER MOVEMENT 
     //variables for movement 
     public float moveSpeed;
     public Rigidbody2D rb;
@@ -25,7 +26,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
      void ProcessInput()
-    {
+    { //controls
         float moveX = Input.GetAxisRaw("Horizontal");
         float moveY = Input.GetAxisRaw("Vertical");
 
