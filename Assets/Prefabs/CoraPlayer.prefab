@@ -188,6 +188,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   rb: {fileID: 4211359236541739734}
+  PlayerControls:
+    m_Name: Player Controls
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 81bdda94-0b28-433d-9dca-7518e2bd6dbd
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  PlayerInteract:
+    m_Name: Player Interact
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 09980be8-c76e-41cd-8115-87cfe214ff38
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
   animator: {fileID: 1673794982632206274}
 --- !u!95 &1673794982632206274
 Animator:

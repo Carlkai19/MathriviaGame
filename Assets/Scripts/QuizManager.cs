@@ -11,6 +11,8 @@ public class QuizManager : MonoBehaviour
     public int CurrentQuestions;
     public Text QuestionTxt;
 
+    public HealthManager PlayerHP; //this is how I called the script from the player halthbar!
+
     public GameObject QuizPanel;
     public GameObject ItemToDestroyOnceCompletion;
 
@@ -31,6 +33,16 @@ public class QuizManager : MonoBehaviour
     }
     public void correct()
     {
+        //when you are right 
+        PlayerHP.Heal(5); //this is from the healthManager script. 
+        QnAList.RemoveAt(CurrentQuestions);
+        generateQuestions();
+
+    }
+    public void wrong()
+    {
+        //when you answer wrong. 
+        PlayerHP.TakeDamage(15);
         QnAList.RemoveAt(CurrentQuestions);
         generateQuestions();
     }
@@ -54,7 +66,7 @@ public class QuizManager : MonoBehaviour
     {  
         if(QnAList.Count > 0)
         {
-//here we randomly pick a question from the QnAList; 
+        //here we randomly pick a question from the QnAList; 
         CurrentQuestions = Random.Range(0, QnAList.Count);
         //display the question from the list
         QuestionTxt.text = QnAList[CurrentQuestions].Question;

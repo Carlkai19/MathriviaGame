@@ -2,31 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.InputSystem;
 
 public class Interactable : MonoBehaviour
 {
-
     public bool isInRange;
-    public KeyCode InteractKey;
     public UnityEvent interactAction;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
     void Update()
     {
-        if (isInRange) //if player is close to the interactable object
+        if (isInRange && Keyboard.current.eKey.wasPressedThisFrame) // Using the new Input System to check for the 'E' key press
         {
-            if (Input.GetKeyDown(InteractKey)) //and the player presses that key
-            {
-                interactAction.Invoke(); //do action
-            }
+            Interact();
         }
     }
-    
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -34,14 +23,24 @@ public class Interactable : MonoBehaviour
         {
             isInRange = true;
             Debug.Log("Player can interact!");
-        }     
+        }
     }
+
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
             isInRange = false;
             Debug.Log("Player can't interact!");
+        }
+    }
+
+    // This method gets called both by pressing 'E' and by UI button click
+    public void Interact()
+    {
+        if (isInRange)
+        {
+            interactAction.Invoke(); // Trigger the interaction
         }
     }
 }
