@@ -1,0 +1,78 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8845940479455474867
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2905975682909753027}
+  - component: {fileID: 8781107282887905512}
+  m_Layer: 0
+  m_Name: QuizManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 2147483647
+  m_IsActive: 1
+--- !u!4 &2905975682909753027
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8845940479455474867}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8781107282887905512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8845940479455474867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6e6608e0edf11242be1d26d980b0731, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  QnAList:
+  - Question: is this working correctly?
+    Answers:
+    - idk
+    - maybe?
+    - I hope so
+    - YES
+    CorrectAnswers: 4
+  - Question: Where is the body?
+    Answers:
+    - huh?
+    - idk
+    - she's the body!
+    - are u insane?
+    CorrectAnswers: 3
+  - Question: Is the Math mathing?
+    Answers:
+    - no
+    - there's no such a thing
+    - u tell me
+    - yeah...yeah
+    CorrectAnswers: 4
+  options:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  CurrentQuestions: 0
+  QuestionTxt: {fileID: 0}
+  PlayerHP: {fileID: 0}
+  QuizPanel: {fileID: 0}
+  ItemToDestroyOnceCompletion: {fileID: 0}
