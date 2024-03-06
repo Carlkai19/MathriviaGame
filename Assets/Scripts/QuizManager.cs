@@ -34,12 +34,8 @@ public class QuizManager : MonoBehaviour
     public void correct()
     {
         //when you are right 
-<<<<<<< HEAD
 
         PlayerHP.Heal(15); //this is from the healthManager script. 
-=======
-        PlayerHP.Heal(5); //this is from the healthManager script. 
->>>>>>> cf417f42fdcae609575635e26fc9eb14d73741d3
         QnAList.RemoveAt(CurrentQuestions);
         generateQuestions();
 
@@ -47,13 +43,9 @@ public class QuizManager : MonoBehaviour
     public void wrong()
     {
         //when you answer wrong. 
-<<<<<<< HEAD
 
         PlayerHP.TakeDamage(10);
 
-=======
-        PlayerHP.TakeDamage(15);
->>>>>>> cf417f42fdcae609575635e26fc9eb14d73741d3
         QnAList.RemoveAt(CurrentQuestions);
         generateQuestions();
     }
